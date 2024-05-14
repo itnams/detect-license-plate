@@ -1,0 +1,8 @@
+
+[0m[7m[1m[31m NX [39m[22m[27m[0m  [31mProperty 'proxyConfig' does not match the schema.[39m
+
+{
+  "type": "string",
+  "description": "Proxy configuration file. For more information, see https://angular.io/guide/build#proxying-to-a-backend-server."
+}'
+

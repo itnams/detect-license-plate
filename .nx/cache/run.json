@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx run detect-license-plate:serve:development",
+    "startTime": "2024-05-14T10:09:30.670Z",
+    "endTime": "2024-05-14T10:51:09.949Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "detect-license-plate:serve:development",
+      "target": "serve",
+      "projectName": "detect-license-plate",
+      "hash": "6697738221179504235",
+      "startTime": "2024-05-14T10:09:30.677Z",
+      "endTime": "2024-05-14T10:51:09.948Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}

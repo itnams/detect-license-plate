@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="d-grid gap-3">
+    <h1>Detect Lincense Plate</h1>
+    <div class="form-group">
+      <label for="upload">Chọn ảnh:</label>
+      <input type="file" (change)="onFileSelected($event)" accept="image/*">
+    </div>
+    <div class="image-container">
+      <img [src]="selectedFileUrl$ | async" alt="Selected Image"/>
+      <div class="rectangle-overlay"></div>
+    </div>
+    <button (click)="onSubmit()" [disabled]="selectedFile == null" class="btn btn-primary">Gửi ảnh</button>
+  </div>
+</div>
