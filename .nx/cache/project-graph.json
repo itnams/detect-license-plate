@@ -50,6 +50,56 @@
         "implicitDependencies": []
       }
     },
+    "models": {
+      "name": "models",
+      "type": "lib",
+      "data": {
+        "root": "src/libs/common/models",
+        "targets": {
+          "lint": {
+            "executor": "@nx/eslint:lint",
+            "cache": true,
+            "inputs": [
+              "default",
+              "{workspaceRoot}/.eslintrc.json",
+              "{workspaceRoot}/.eslintignore",
+              "{workspaceRoot}/eslint.config.js"
+            ],
+            "options": {},
+            "configurations": {}
+          },
+          "test": {
+            "executor": "@nx/jest:jest",
+            "cache": true,
+            "inputs": [
+              "default",
+              "^production",
+              "{workspaceRoot}/jest.preset.js"
+            ],
+            "outputs": [
+              "{workspaceRoot}/coverage/{projectRoot}"
+            ],
+            "options": {
+              "passWithNoTests": true,
+              "jestConfig": "src/libs/common/models/jest.config.ts"
+            },
+            "configurations": {
+              "ci": {
+                "ci": true,
+                "codeCoverage": true
+              }
+            }
+          }
+        },
+        "name": "models",
+        "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+        "sourceRoot": "src/libs/common/models/src",
+        "prefix": "lib",
+        "projectType": "library",
+        "tags": [],
+        "implicitDependencies": []
+      }
+    },
     "box-image": {
       "name": "box-image",
       "type": "lib",
@@ -11965,6 +12015,23 @@
         "type": "static"
       }
     ],
+    "models": [
+      {
+        "source": "models",
+        "target": "npm:@angular/core",
+        "type": "static"
+      },
+      {
+        "source": "models",
+        "target": "npm:@angular/common",
+        "type": "static"
+      },
+      {
+        "source": "models",
+        "target": "npm:jest-preset-angular",
+        "type": "static"
+      }
+    ],
     "box-image": [
       {
         "source": "box-image",
@@ -12001,6 +12068,11 @@
       {
         "source": "home",
         "target": "services",
+        "type": "static"
+      },
+      {
+        "source": "home",
+        "target": "box-image",
         "type": "static"
       },
       {

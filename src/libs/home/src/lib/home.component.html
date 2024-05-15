@@ -6,8 +6,7 @@
       <input type="file" (change)="onFileSelected($event)" accept="image/*">
     </div>
     <div class="image-container">
-      <img [src]="selectedFileUrl$ | async" alt="Selected Image"/>
-      <div class="rectangle-overlay"></div>
+      <lib-box-image [imageWidth]="(imageWidth$ | async) ?? 0" srcImg="{{(selectedFileUrl$ | async) ?? ''}}" [results]="(results$ | async) ?? [] "></lib-box-image>
     </div>
     <button (click)="onSubmit()" [disabled]="selectedFile == null" class="btn btn-primary">Gửi ảnh</button>
   </div>

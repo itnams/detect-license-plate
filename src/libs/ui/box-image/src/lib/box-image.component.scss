@@ -10,12 +10,7 @@
     height: auto; /* Maintain image aspect ratio */
   }
   .rectangle-overlay {
-  position: absolute; /* Position relative to its parent */
-  top: 375px; /* Set top position from ymin */
-  left: 800px; /* Set left position from xmin */
-  width: 36px; /* Calculate width from xmax - xmin */
-  height: 19px; /* Calculate height from ymax - ymin */
-  background-color: rgba(0, 0, 0, 0.5); /* Set semi-transparent background */
+  position: absolute; 
   border: 2px solid #FF0000; /* Add a red border */
   z-index: 1; /* Ensure the overlay is on top of the image */
 }

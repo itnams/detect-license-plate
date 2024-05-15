@@ -1,1 +1,1 @@
-export * from './lib/box-image/box-image.component';
+export * from './lib/box-image.component';

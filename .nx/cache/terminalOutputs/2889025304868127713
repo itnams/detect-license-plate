@@ -1,0 +1,19 @@
+- Building...
+
+[37m[1mInitial chunk files[22m[2m | [22m[1mNames[22m        [2m | [22m [1mRaw size[22m[39m
+[37m[32mstyles.css[39m[37m         [2m | [22m[2mstyles[22m       [2m | [22m[36m271.13 kB[39m[37m[2m | [22m[39m
+[37m[32mpolyfills.js[39m[37m       [2m | [22m[2mpolyfills[22m    [2m | [22m [36m85.81 kB[39m[37m[2m | [22m[39m
+[37m[32mscripts.js[39m[37m         [2m | [22m[2mscripts[22m      [2m | [22m [36m77.90 kB[39m[37m[2m | [22m[39m
+[37m[32mmain.js[39m[37m            [2m | [22m[2mmain[22m         [2m | [22m [36m39.76 kB[39m[37m[2m | [22m[39m
+[37m[39m
+[37m[1m [22m                  [2m | [22m[1mInitial total[22m[2m | [22m[1m474.60 kB[22m[39m
+[37m[39m
+[37mApplication bundle generation complete. [2.692 seconds][39m
+[37m[39m
+[37mWatch mode enabled. Watching for file changes...[39m
+Re-optimizing dependencies because vite config has changed
+
+[0m[7m[1m[31m NX [39m[22m[27m[0m  [31mENOTEMPTY: directory not empty, rmdir 'D:\GTTM\detect-license-plate\.angular\cache\17.3.7\vite\deps'[39m
+
+Pass --verbose to see the stacktrace.
+

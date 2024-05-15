@@ -1,1 +1,4 @@
-<p>box-image works!</p>
+<div class="image-container">
+    <img [style.width.px]="imageWidth" [src]="srcImg" alt="Selected Image" />
+    <div *ngFor="let item of results" class="rectangle-overlay" [style.left.px]="item.box?.xmin" [style.top.px]="item.box?.ymin" [style.width.px]="(item.box?.xmax ?? 0) - (item.box?.xmin ?? 0)" [style.height.px]="(item.box?.ymax  ?? 0) - (item.box?.ymin ?? 0)"></div>
+</div>
