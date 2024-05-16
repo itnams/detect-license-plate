@@ -12018,16 +12018,6 @@
     "models": [
       {
         "source": "models",
-        "target": "npm:@angular/core",
-        "type": "static"
-      },
-      {
-        "source": "models",
-        "target": "npm:@angular/common",
-        "type": "static"
-      },
-      {
-        "source": "models",
         "target": "npm:jest-preset-angular",
         "type": "static"
       }
@@ -12041,6 +12031,16 @@
       {
         "source": "box-image",
         "target": "npm:@angular/common",
+        "type": "static"
+      },
+      {
+        "source": "box-image",
+        "target": "models",
+        "type": "static"
+      },
+      {
+        "source": "box-image",
+        "target": "npm:rxjs",
         "type": "static"
       },
       {
@@ -12078,6 +12078,16 @@
       {
         "source": "home",
         "target": "npm:rxjs",
+        "type": "static"
+      },
+      {
+        "source": "home",
+        "target": "models",
+        "type": "static"
+      },
+      {
+        "source": "home",
+        "target": "npm:@angular/platform-browser",
         "type": "static"
       },
       {

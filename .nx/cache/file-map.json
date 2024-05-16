@@ -67,56 +67,53 @@
   "fileMap": {
     "nonProjectFiles": [],
     "projectFileMap": {
-      "models": [
+      "services": [
         {
-          "file": "src/libs/common/models/.eslintrc.json",
+          "file": "src/libs/common/services/.eslintrc.json",
           "hash": "14264782331220934964"
         },
         {
-          "file": "src/libs/common/models/README.md",
-          "hash": "13610073357949299532"
+          "file": "src/libs/common/services/README.md",
+          "hash": "5047947139507590044"
         },
         {
-          "file": "src/libs/common/models/jest.config.ts",
-          "hash": "264227987341592298"
+          "file": "src/libs/common/services/jest.config.ts",
+          "hash": "11185984342482548795"
         },
         {
-          "file": "src/libs/common/models/project.json",
-          "hash": "17688467353203420669"
+          "file": "src/libs/common/services/project.json",
+          "hash": "13296547661678407482"
         },
         {
-          "file": "src/libs/common/models/src/index.ts",
-          "hash": "3546000696975628887"
+          "file": "src/libs/common/services/src/index.ts",
+          "hash": "2038938396979172428"
         },
         {
-          "file": "src/libs/common/models/src/lib/models/models.component.html",
-          "hash": "11304420682906745514"
-        },
-        {
-          "file": "src/libs/common/models/src/lib/models/models.component.ts",
-          "hash": "16232762936392553229",
+          "file": "src/libs/common/services/src/lib/api.service.ts",
+          "hash": "12645956817831760504",
           "deps": [
+            "npm:@angular/common",
             "npm:@angular/core",
-            "npm:@angular/common"
+            "npm:rxjs"
           ]
         },
         {
-          "file": "src/libs/common/models/src/test-setup.ts",
+          "file": "src/libs/common/services/src/test-setup.ts",
           "hash": "12935735732682149507",
           "deps": [
             "npm:jest-preset-angular"
           ]
         },
         {
-          "file": "src/libs/common/models/tsconfig.json",
+          "file": "src/libs/common/services/tsconfig.json",
           "hash": "16248533471678702062"
         },
         {
-          "file": "src/libs/common/models/tsconfig.lib.json",
+          "file": "src/libs/common/services/tsconfig.lib.json",
           "hash": "8746075233993636049"
         },
         {
-          "file": "src/libs/common/models/tsconfig.spec.json",
+          "file": "src/libs/common/services/tsconfig.spec.json",
           "hash": "9840611283105717156"
         }
       ],
@@ -344,53 +341,56 @@
           "hash": "17360312457925561423"
         }
       ],
-      "services": [
+      "models": [
         {
-          "file": "src/libs/common/services/.eslintrc.json",
+          "file": "src/libs/common/models/.eslintrc.json",
           "hash": "14264782331220934964"
         },
         {
-          "file": "src/libs/common/services/README.md",
-          "hash": "5047947139507590044"
+          "file": "src/libs/common/models/README.md",
+          "hash": "13610073357949299532"
         },
         {
-          "file": "src/libs/common/services/jest.config.ts",
-          "hash": "11185984342482548795"
+          "file": "src/libs/common/models/jest.config.ts",
+          "hash": "264227987341592298"
         },
         {
-          "file": "src/libs/common/services/project.json",
-          "hash": "13296547661678407482"
+          "file": "src/libs/common/models/project.json",
+          "hash": "17688467353203420669"
         },
         {
-          "file": "src/libs/common/services/src/index.ts",
-          "hash": "2038938396979172428"
+          "file": "src/libs/common/models/src/index.ts",
+          "hash": "7425115559311091562"
         },
         {
-          "file": "src/libs/common/services/src/lib/api.service.ts",
-          "hash": "12645956817831760504",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:rxjs"
-          ]
+          "file": "src/libs/common/models/src/lib/plate-box.ts",
+          "hash": "549536017751287854"
         },
         {
-          "file": "src/libs/common/services/src/test-setup.ts",
+          "file": "src/libs/common/models/src/lib/plate-recognition.ts",
+          "hash": "12019745144764528289"
+        },
+        {
+          "file": "src/libs/common/models/src/lib/plate-results.ts",
+          "hash": "3632473692741006429"
+        },
+        {
+          "file": "src/libs/common/models/src/test-setup.ts",
           "hash": "12935735732682149507",
           "deps": [
             "npm:jest-preset-angular"
           ]
         },
         {
-          "file": "src/libs/common/services/tsconfig.json",
+          "file": "src/libs/common/models/tsconfig.json",
           "hash": "16248533471678702062"
         },
         {
-          "file": "src/libs/common/services/tsconfig.lib.json",
+          "file": "src/libs/common/models/tsconfig.lib.json",
           "hash": "8746075233993636049"
         },
         {
-          "file": "src/libs/common/services/tsconfig.spec.json",
+          "file": "src/libs/common/models/tsconfig.spec.json",
           "hash": "9840611283105717156"
         }
       ],
@@ -417,22 +417,20 @@
         },
         {
           "file": "src/libs/home/src/lib/home.component.html",
-          "hash": "18000356214981414648"
-        },
-        {
-          "file": "src/libs/home/src/lib/home.component.scss",
-          "hash": "3244421341483603138"
+          "hash": "17962639626948330693"
         },
         {
           "file": "src/libs/home/src/lib/home.component.ts",
-          "hash": "5480152148566172417",
+          "hash": "10144110440148837988",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/common",
             "npm:@angular/forms",
             "services",
             "box-image",
-            "npm:rxjs"
+            "npm:rxjs",
+            "models",
+            "npm:@angular/platform-browser"
           ]
         },
         {
@@ -478,18 +476,20 @@
         },
         {
           "file": "src/libs/ui/box-image/src/lib/box-image.component.html",
-          "hash": "5029057325196576872"
+          "hash": "9644655519997709204"
         },
         {
           "file": "src/libs/ui/box-image/src/lib/box-image.component.scss",
-          "hash": "13244247455709825103"
+          "hash": "692093750330384322"
         },
         {
           "file": "src/libs/ui/box-image/src/lib/box-image.component.ts",
-          "hash": "4969959594281201029",
+          "hash": "10404818970193435396",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/common"
+            "npm:@angular/common",
+            "models",
+            "npm:rxjs"
           ]
         },
         {

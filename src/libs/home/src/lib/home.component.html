@@ -1,13 +1,72 @@
 <div class="container">
   <div class="d-grid gap-3">
     <h1>Detect Lincense Plate</h1>
-    <div class="form-group">
-      <label for="upload">Chọn ảnh:</label>
-      <input type="file" (change)="onFileSelected($event)" accept="image/*">
+    <div class="d-flex">
+      <div class="mx-1">
+        <div class="form-group my-1">
+          <label for="upload">Chọn ảnh:</label>
+          <input type="file" (change)="onFileSelected($event)" accept="image/*">
+        </div>
+        <div class="image-container">
+          <lib-box-image *ngIf="(selectedFileUrl$ | async) as selectedFileUrl" [imageWidth]="(imageWidth$ | async) ?? 0"
+            srcImg="{{selectedFileUrl ?? ''}}" [results$]="results$"></lib-box-image>
+        </div>
+      </div>
+      <div class="mx-1">
+        <table class="table" *ngIf="plateRecognition$ | async as plateRecognition">
+          <tbody>
+            <tr>
+              <th>Time:</th>
+              <td>{{transform(plateRecognition.timestamp ?? '')}}</td>
+            </tr>
+            <tr>
+              <th>File name:</th>
+              <td>{{plateRecognition.filename}}</td>
+            </tr>
+            <tr>
+              <th>Lincense Plate</th>
+              <td>
+                <span *ngFor="let result of plateRecognition.results"
+                  class="badge badge-primary bg-primary mx-1">{{result.plate}}</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <div class="image-container">
-      <lib-box-image [imageWidth]="(imageWidth$ | async) ?? 0" srcImg="{{(selectedFileUrl$ | async) ?? ''}}" [results]="(results$ | async) ?? [] "></lib-box-image>
+    <button (click)="onSubmit()" [disabled]="selectedFile == null || (loading$ | async) == true"
+      class="btn btn-primary">
+      <div *ngIf="(loading$ | async) == true" class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p *ngIf="(loading$ | async) == false">Submit</p>
+    </button>
+    <div class="overflow-auto" [style.height.px]="500">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Time</th>
+            <th scope="col">Image</th>
+            <th scope="col">License Plates</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of (listPlateRecognition$ | async) ?? [];let i = index">
+            <th scope="row">{{i + 1}}</th>
+            <td>{{transform(item.timestamp ?? '')}}</td>
+            <td>
+              <div>
+                <img [src]="item.image ?? ''" alt="" [style.width.px]="60">
+              </div>
+            </td>
+            <td>
+              <span *ngFor="let result of item.results"
+                class="badge badge-primary bg-primary mx-1">{{result.plate}}</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    <button (click)="onSubmit()" [disabled]="selectedFile == null" class="btn btn-primary">Gửi ảnh</button>
   </div>
 </div>

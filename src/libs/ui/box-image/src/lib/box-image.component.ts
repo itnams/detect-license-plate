@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PlateResults } from '@detect-license-plate/models';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'lib-box-image',
@@ -10,11 +11,10 @@ import { PlateResults } from '@detect-license-plate/models';
   styleUrl: './box-image.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BoxImageComponent {
+export class BoxImageComponent implements AfterViewInit{
   @Input() srcImg: string = ''
-  @Input() results: PlateResults[] = []
+  @Input() results$ = new BehaviorSubject<PlateResults[]>([])
   @Input() imageWidth: number = 0
-  constructor(){
-    console.log(this.results)
-  }
+  constructor(){}
+  ngAfterViewInit(): void { }
 }
