@@ -354,122 +354,6 @@
           "hash": "3525076938886942204"
         }
       ],
-      "live-camera": [
-        {
-          "file": "src/libs/live-camera/.eslintrc.json",
-          "hash": "1407031631789642397"
-        },
-        {
-          "file": "src/libs/live-camera/README.md",
-          "hash": "9544885593883949646"
-        },
-        {
-          "file": "src/libs/live-camera/jest.config.ts",
-          "hash": "8096565578361046739"
-        },
-        {
-          "file": "src/libs/live-camera/project.json",
-          "hash": "6798116595619683759"
-        },
-        {
-          "file": "src/libs/live-camera/src/index.ts",
-          "hash": "16390782500371957791"
-        },
-        {
-          "file": "src/libs/live-camera/src/lib/live-camera.component.html",
-          "hash": "2096626415815270447"
-        },
-        {
-          "file": "src/libs/live-camera/src/lib/live-camera.component.scss",
-          "hash": "796948238785129383"
-        },
-        {
-          "file": "src/libs/live-camera/src/lib/live-camera.component.ts",
-          "hash": "17636759979027687010",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core"
-          ]
-        },
-        {
-          "file": "src/libs/live-camera/src/test-setup.ts",
-          "hash": "12935735732682149507",
-          "deps": [
-            "npm:jest-preset-angular"
-          ]
-        },
-        {
-          "file": "src/libs/live-camera/tsconfig.json",
-          "hash": "8526453262384300416"
-        },
-        {
-          "file": "src/libs/live-camera/tsconfig.lib.json",
-          "hash": "6020606002228403423"
-        },
-        {
-          "file": "src/libs/live-camera/tsconfig.spec.json",
-          "hash": "7159729809249402441"
-        }
-      ],
-      "box-image": [
-        {
-          "file": "src/libs/ui/box-image/.eslintrc.json",
-          "hash": "14264782331220934964"
-        },
-        {
-          "file": "src/libs/ui/box-image/README.md",
-          "hash": "8210365680545946882"
-        },
-        {
-          "file": "src/libs/ui/box-image/jest.config.ts",
-          "hash": "11037055268848878070"
-        },
-        {
-          "file": "src/libs/ui/box-image/project.json",
-          "hash": "5209218580650842825"
-        },
-        {
-          "file": "src/libs/ui/box-image/src/index.ts",
-          "hash": "11841764057427188505"
-        },
-        {
-          "file": "src/libs/ui/box-image/src/lib/box-image.component.html",
-          "hash": "9644655519997709204"
-        },
-        {
-          "file": "src/libs/ui/box-image/src/lib/box-image.component.scss",
-          "hash": "692093750330384322"
-        },
-        {
-          "file": "src/libs/ui/box-image/src/lib/box-image.component.ts",
-          "hash": "10404818970193435396",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common",
-            "models",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "src/libs/ui/box-image/src/test-setup.ts",
-          "hash": "12935735732682149507",
-          "deps": [
-            "npm:jest-preset-angular"
-          ]
-        },
-        {
-          "file": "src/libs/ui/box-image/tsconfig.json",
-          "hash": "16248533471678702062"
-        },
-        {
-          "file": "src/libs/ui/box-image/tsconfig.lib.json",
-          "hash": "8746075233993636049"
-        },
-        {
-          "file": "src/libs/ui/box-image/tsconfig.spec.json",
-          "hash": "9840611283105717156"
-        }
-      ],
       "navigation-bar": [
         {
           "file": "src/libs/navigation-bar/.eslintrc.json",
@@ -493,7 +377,7 @@
         },
         {
           "file": "src/libs/navigation-bar/src/lib/navigation-bar.component.html",
-          "hash": "2125118398391843231"
+          "hash": "8905884907310174735"
         },
         {
           "file": "src/libs/navigation-bar/src/lib/navigation-bar.component.scss",
@@ -585,6 +469,122 @@
         },
         {
           "file": "src/libs/home/tsconfig.spec.json",
+          "hash": "7159729809249402441"
+        }
+      ],
+      "box-image": [
+        {
+          "file": "src/libs/ui/box-image/.eslintrc.json",
+          "hash": "14264782331220934964"
+        },
+        {
+          "file": "src/libs/ui/box-image/README.md",
+          "hash": "8210365680545946882"
+        },
+        {
+          "file": "src/libs/ui/box-image/jest.config.ts",
+          "hash": "11037055268848878070"
+        },
+        {
+          "file": "src/libs/ui/box-image/project.json",
+          "hash": "5209218580650842825"
+        },
+        {
+          "file": "src/libs/ui/box-image/src/index.ts",
+          "hash": "11841764057427188505"
+        },
+        {
+          "file": "src/libs/ui/box-image/src/lib/box-image.component.html",
+          "hash": "9644655519997709204"
+        },
+        {
+          "file": "src/libs/ui/box-image/src/lib/box-image.component.scss",
+          "hash": "692093750330384322"
+        },
+        {
+          "file": "src/libs/ui/box-image/src/lib/box-image.component.ts",
+          "hash": "10404818970193435396",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "models",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/libs/ui/box-image/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "src/libs/ui/box-image/tsconfig.json",
+          "hash": "16248533471678702062"
+        },
+        {
+          "file": "src/libs/ui/box-image/tsconfig.lib.json",
+          "hash": "8746075233993636049"
+        },
+        {
+          "file": "src/libs/ui/box-image/tsconfig.spec.json",
+          "hash": "9840611283105717156"
+        }
+      ],
+      "live-camera": [
+        {
+          "file": "src/libs/live-camera/.eslintrc.json",
+          "hash": "1407031631789642397"
+        },
+        {
+          "file": "src/libs/live-camera/README.md",
+          "hash": "9544885593883949646"
+        },
+        {
+          "file": "src/libs/live-camera/jest.config.ts",
+          "hash": "8096565578361046739"
+        },
+        {
+          "file": "src/libs/live-camera/project.json",
+          "hash": "6798116595619683759"
+        },
+        {
+          "file": "src/libs/live-camera/src/index.ts",
+          "hash": "16390782500371957791"
+        },
+        {
+          "file": "src/libs/live-camera/src/lib/live-camera.component.html",
+          "hash": "16266400054444213080"
+        },
+        {
+          "file": "src/libs/live-camera/src/lib/live-camera.component.scss",
+          "hash": "796948238785129383"
+        },
+        {
+          "file": "src/libs/live-camera/src/lib/live-camera.component.ts",
+          "hash": "3223360970779886349",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core"
+          ]
+        },
+        {
+          "file": "src/libs/live-camera/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "src/libs/live-camera/tsconfig.json",
+          "hash": "8526453262384300416"
+        },
+        {
+          "file": "src/libs/live-camera/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "src/libs/live-camera/tsconfig.spec.json",
           "hash": "7159729809249402441"
         }
       ],

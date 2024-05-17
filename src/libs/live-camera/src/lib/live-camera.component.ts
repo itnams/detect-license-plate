@@ -100,13 +100,10 @@ export class LiveCameraComponent {
     predictions.forEach(prediction => {
       const { x, y, width, height } = prediction.bbox;
       this.ctx.strokeStyle = prediction.color;
-      this.ctx.lineWidth = 4;
+      this.ctx.lineWidth = 2;
       this.ctx.strokeRect((x - width / 2) / scale, (y - height / 2) / scale, width / scale, height / scale);
 
       this.ctx.fillStyle = prediction.color;
-      const textWidth = this.ctx.measureText(prediction.class).width;
-      const textHeight = parseInt(this.font, 10);
-      this.ctx.fillRect((x - width / 2) / scale, (y - height / 2) / scale, textWidth + 8, textHeight + 4);
     });
 
     predictions.forEach(prediction => {
@@ -114,7 +111,6 @@ export class LiveCameraComponent {
       this.ctx.font = this.font;
       this.ctx.textBaseline = 'top';
       this.ctx.fillStyle = '#000000';
-      this.ctx.fillText(prediction.class, (x - width / 2) / scale + 4, (y - height / 2) / scale + 1);
     });
   }
 
