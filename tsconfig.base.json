@@ -17,7 +17,13 @@
     "paths": {
       "@detect-license-plate/box-image": ["src/libs/ui/box-image/src/index.ts"],
       "@detect-license-plate/home": ["src/libs/home/src/index.ts"],
+      "@detect-license-plate/live-camera": [
+        "src/libs/live-camera/src/index.ts"
+      ],
       "@detect-license-plate/models": ["src/libs/common/models/src/index.ts"],
+      "@detect-license-plate/navigation-bar": [
+        "src/libs/navigation-bar/src/index.ts"
+      ],
       "@detect-license-plate/services": [
         "src/libs/common/services/src/index.ts"
       ]

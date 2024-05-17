@@ -11,6 +11,7 @@
     "@angular/platform-browser-dynamic": "~17.3.0",
     "@angular/router": "~17.3.0",
     "@nx/angular": "19.0.3",
+    "@tensorflow/tfjs": "^4.19.0",
     "boostrap": "^2.0.0",
     "bootstrap": "5.3.3",
     "rxjs": "~7.8.0",
@@ -56,8 +57,14 @@
     "@detect-license-plate/home": [
       "src/libs/home/src/index.ts"
     ],
+    "@detect-license-plate/live-camera": [
+      "src/libs/live-camera/src/index.ts"
+    ],
     "@detect-license-plate/models": [
       "src/libs/common/models/src/index.ts"
+    ],
+    "@detect-license-plate/navigation-bar": [
+      "src/libs/navigation-bar/src/index.ts"
     ],
     "@detect-license-plate/services": [
       "src/libs/common/services/src/index.ts"
@@ -67,53 +74,56 @@
   "fileMap": {
     "nonProjectFiles": [],
     "projectFileMap": {
-      "services": [
+      "models": [
         {
-          "file": "src/libs/common/services/.eslintrc.json",
+          "file": "src/libs/common/models/.eslintrc.json",
           "hash": "14264782331220934964"
         },
         {
-          "file": "src/libs/common/services/README.md",
-          "hash": "5047947139507590044"
+          "file": "src/libs/common/models/README.md",
+          "hash": "13610073357949299532"
         },
         {
-          "file": "src/libs/common/services/jest.config.ts",
-          "hash": "11185984342482548795"
+          "file": "src/libs/common/models/jest.config.ts",
+          "hash": "264227987341592298"
         },
         {
-          "file": "src/libs/common/services/project.json",
-          "hash": "13296547661678407482"
+          "file": "src/libs/common/models/project.json",
+          "hash": "17688467353203420669"
         },
         {
-          "file": "src/libs/common/services/src/index.ts",
-          "hash": "2038938396979172428"
+          "file": "src/libs/common/models/src/index.ts",
+          "hash": "7425115559311091562"
         },
         {
-          "file": "src/libs/common/services/src/lib/api.service.ts",
-          "hash": "12645956817831760504",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:rxjs"
-          ]
+          "file": "src/libs/common/models/src/lib/plate-box.ts",
+          "hash": "549536017751287854"
         },
         {
-          "file": "src/libs/common/services/src/test-setup.ts",
+          "file": "src/libs/common/models/src/lib/plate-recognition.ts",
+          "hash": "12019745144764528289"
+        },
+        {
+          "file": "src/libs/common/models/src/lib/plate-results.ts",
+          "hash": "3632473692741006429"
+        },
+        {
+          "file": "src/libs/common/models/src/test-setup.ts",
           "hash": "12935735732682149507",
           "deps": [
             "npm:jest-preset-angular"
           ]
         },
         {
-          "file": "src/libs/common/services/tsconfig.json",
+          "file": "src/libs/common/models/tsconfig.json",
           "hash": "16248533471678702062"
         },
         {
-          "file": "src/libs/common/services/tsconfig.lib.json",
+          "file": "src/libs/common/models/tsconfig.lib.json",
           "hash": "8746075233993636049"
         },
         {
-          "file": "src/libs/common/services/tsconfig.spec.json",
+          "file": "src/libs/common/models/tsconfig.spec.json",
           "hash": "9840611283105717156"
         }
       ],
@@ -178,7 +188,7 @@
         },
         {
           "file": "package.json",
-          "hash": "17162325509295521701",
+          "hash": "8591277840162559258",
           "deps": [
             "npm:@angular/animations",
             "npm:@angular/common",
@@ -189,6 +199,7 @@
             "npm:@angular/platform-browser-dynamic",
             "npm:@angular/router",
             "npm:@nx/angular",
+            "npm:@tensorflow/tfjs",
             "npm:boostrap",
             "npm:bootstrap",
             "npm:rxjs",
@@ -234,7 +245,7 @@
         },
         {
           "file": "src/app/app.component.html",
-          "hash": "17816966185630879015"
+          "hash": "13838564638660665648"
         },
         {
           "file": "src/app/app.component.scss",
@@ -250,10 +261,11 @@
         },
         {
           "file": "src/app/app.component.ts",
-          "hash": "18422383816886997120",
+          "hash": "18290594350748140789",
           "deps": [
             "npm:@angular/core",
-            "npm:@angular/router"
+            "npm:@angular/router",
+            "navigation-bar"
           ]
         },
         {
@@ -268,10 +280,11 @@
         },
         {
           "file": "src/app/app.routes.ts",
-          "hash": "10929220963383056687",
+          "hash": "9216029304532066225",
           "deps": [
             "npm:@angular/router",
-            "home"
+            "home",
+            "live-camera"
           ]
         },
         {
@@ -292,7 +305,7 @@
         },
         {
           "file": "src/index.html",
-          "hash": "16324362047401352559"
+          "hash": "15849775474033679198"
         },
         {
           "file": "src/main.ts",
@@ -322,7 +335,7 @@
         },
         {
           "file": "tsconfig.base.json",
-          "hash": "12842958320982174092"
+          "hash": "1979994847792318016"
         },
         {
           "file": "tsconfig.editor.json",
@@ -338,118 +351,63 @@
         },
         {
           "file": "yarn.lock",
-          "hash": "17360312457925561423"
+          "hash": "3525076938886942204"
         }
       ],
-      "models": [
+      "live-camera": [
         {
-          "file": "src/libs/common/models/.eslintrc.json",
-          "hash": "14264782331220934964"
-        },
-        {
-          "file": "src/libs/common/models/README.md",
-          "hash": "13610073357949299532"
-        },
-        {
-          "file": "src/libs/common/models/jest.config.ts",
-          "hash": "264227987341592298"
-        },
-        {
-          "file": "src/libs/common/models/project.json",
-          "hash": "17688467353203420669"
-        },
-        {
-          "file": "src/libs/common/models/src/index.ts",
-          "hash": "7425115559311091562"
-        },
-        {
-          "file": "src/libs/common/models/src/lib/plate-box.ts",
-          "hash": "549536017751287854"
-        },
-        {
-          "file": "src/libs/common/models/src/lib/plate-recognition.ts",
-          "hash": "12019745144764528289"
-        },
-        {
-          "file": "src/libs/common/models/src/lib/plate-results.ts",
-          "hash": "3632473692741006429"
-        },
-        {
-          "file": "src/libs/common/models/src/test-setup.ts",
-          "hash": "12935735732682149507",
-          "deps": [
-            "npm:jest-preset-angular"
-          ]
-        },
-        {
-          "file": "src/libs/common/models/tsconfig.json",
-          "hash": "16248533471678702062"
-        },
-        {
-          "file": "src/libs/common/models/tsconfig.lib.json",
-          "hash": "8746075233993636049"
-        },
-        {
-          "file": "src/libs/common/models/tsconfig.spec.json",
-          "hash": "9840611283105717156"
-        }
-      ],
-      "home": [
-        {
-          "file": "src/libs/home/.eslintrc.json",
+          "file": "src/libs/live-camera/.eslintrc.json",
           "hash": "1407031631789642397"
         },
         {
-          "file": "src/libs/home/README.md",
-          "hash": "11867757256229368821"
+          "file": "src/libs/live-camera/README.md",
+          "hash": "9544885593883949646"
         },
         {
-          "file": "src/libs/home/jest.config.ts",
-          "hash": "10940563268413513527"
+          "file": "src/libs/live-camera/jest.config.ts",
+          "hash": "8096565578361046739"
         },
         {
-          "file": "src/libs/home/project.json",
-          "hash": "5667380364017199301"
+          "file": "src/libs/live-camera/project.json",
+          "hash": "6798116595619683759"
         },
         {
-          "file": "src/libs/home/src/index.ts",
-          "hash": "8165197451850904801"
+          "file": "src/libs/live-camera/src/index.ts",
+          "hash": "16390782500371957791"
         },
         {
-          "file": "src/libs/home/src/lib/home.component.html",
-          "hash": "17962639626948330693"
+          "file": "src/libs/live-camera/src/lib/live-camera.component.html",
+          "hash": "2096626415815270447"
         },
         {
-          "file": "src/libs/home/src/lib/home.component.ts",
-          "hash": "10144110440148837988",
+          "file": "src/libs/live-camera/src/lib/live-camera.component.scss",
+          "hash": "796948238785129383"
+        },
+        {
+          "file": "src/libs/live-camera/src/lib/live-camera.component.ts",
+          "hash": "17636759979027687010",
           "deps": [
-            "npm:@angular/core",
             "npm:@angular/common",
-            "npm:@angular/forms",
-            "services",
-            "box-image",
-            "npm:rxjs",
-            "models",
-            "npm:@angular/platform-browser"
+            "npm:@angular/core"
           ]
         },
         {
-          "file": "src/libs/home/src/test-setup.ts",
+          "file": "src/libs/live-camera/src/test-setup.ts",
           "hash": "12935735732682149507",
           "deps": [
             "npm:jest-preset-angular"
           ]
         },
         {
-          "file": "src/libs/home/tsconfig.json",
+          "file": "src/libs/live-camera/tsconfig.json",
           "hash": "8526453262384300416"
         },
         {
-          "file": "src/libs/home/tsconfig.lib.json",
+          "file": "src/libs/live-camera/tsconfig.lib.json",
           "hash": "6020606002228403423"
         },
         {
-          "file": "src/libs/home/tsconfig.spec.json",
+          "file": "src/libs/live-camera/tsconfig.spec.json",
           "hash": "7159729809249402441"
         }
       ],
@@ -509,6 +467,174 @@
         },
         {
           "file": "src/libs/ui/box-image/tsconfig.spec.json",
+          "hash": "9840611283105717156"
+        }
+      ],
+      "navigation-bar": [
+        {
+          "file": "src/libs/navigation-bar/.eslintrc.json",
+          "hash": "1407031631789642397"
+        },
+        {
+          "file": "src/libs/navigation-bar/README.md",
+          "hash": "3888572365189028608"
+        },
+        {
+          "file": "src/libs/navigation-bar/jest.config.ts",
+          "hash": "8240581544813115467"
+        },
+        {
+          "file": "src/libs/navigation-bar/project.json",
+          "hash": "16774694630172726487"
+        },
+        {
+          "file": "src/libs/navigation-bar/src/index.ts",
+          "hash": "14869921377890823754"
+        },
+        {
+          "file": "src/libs/navigation-bar/src/lib/navigation-bar.component.html",
+          "hash": "2125118398391843231"
+        },
+        {
+          "file": "src/libs/navigation-bar/src/lib/navigation-bar.component.scss",
+          "hash": "1047264821499003931"
+        },
+        {
+          "file": "src/libs/navigation-bar/src/lib/navigation-bar.component.ts",
+          "hash": "2337028012312633421",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/router",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/libs/navigation-bar/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "src/libs/navigation-bar/tsconfig.json",
+          "hash": "8526453262384300416"
+        },
+        {
+          "file": "src/libs/navigation-bar/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "src/libs/navigation-bar/tsconfig.spec.json",
+          "hash": "7159729809249402441"
+        }
+      ],
+      "home": [
+        {
+          "file": "src/libs/home/.eslintrc.json",
+          "hash": "1407031631789642397"
+        },
+        {
+          "file": "src/libs/home/README.md",
+          "hash": "11867757256229368821"
+        },
+        {
+          "file": "src/libs/home/jest.config.ts",
+          "hash": "10940563268413513527"
+        },
+        {
+          "file": "src/libs/home/project.json",
+          "hash": "5667380364017199301"
+        },
+        {
+          "file": "src/libs/home/src/index.ts",
+          "hash": "8165197451850904801"
+        },
+        {
+          "file": "src/libs/home/src/lib/home.component.html",
+          "hash": "11909126891879526410"
+        },
+        {
+          "file": "src/libs/home/src/lib/home.component.ts",
+          "hash": "10144110440148837988",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/forms",
+            "services",
+            "box-image",
+            "npm:rxjs",
+            "models",
+            "npm:@angular/platform-browser"
+          ]
+        },
+        {
+          "file": "src/libs/home/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "src/libs/home/tsconfig.json",
+          "hash": "8526453262384300416"
+        },
+        {
+          "file": "src/libs/home/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "src/libs/home/tsconfig.spec.json",
+          "hash": "7159729809249402441"
+        }
+      ],
+      "services": [
+        {
+          "file": "src/libs/common/services/.eslintrc.json",
+          "hash": "14264782331220934964"
+        },
+        {
+          "file": "src/libs/common/services/README.md",
+          "hash": "5047947139507590044"
+        },
+        {
+          "file": "src/libs/common/services/jest.config.ts",
+          "hash": "11185984342482548795"
+        },
+        {
+          "file": "src/libs/common/services/project.json",
+          "hash": "13296547661678407482"
+        },
+        {
+          "file": "src/libs/common/services/src/index.ts",
+          "hash": "2038938396979172428"
+        },
+        {
+          "file": "src/libs/common/services/src/lib/api.service.ts",
+          "hash": "12645956817831760504",
+          "deps": [
+            "npm:@angular/common",
+            "npm:@angular/core",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/libs/common/services/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "src/libs/common/services/tsconfig.json",
+          "hash": "16248533471678702062"
+        },
+        {
+          "file": "src/libs/common/services/tsconfig.lib.json",
+          "hash": "8746075233993636049"
+        },
+        {
+          "file": "src/libs/common/services/tsconfig.spec.json",
           "hash": "9840611283105717156"
         }
       ]
