@@ -74,56 +74,62 @@
   "fileMap": {
     "nonProjectFiles": [],
     "projectFileMap": {
-      "models": [
+      "box-image": [
         {
-          "file": "src/libs/common/models/.eslintrc.json",
+          "file": "src/libs/ui/box-image/.eslintrc.json",
           "hash": "14264782331220934964"
         },
         {
-          "file": "src/libs/common/models/README.md",
-          "hash": "13610073357949299532"
+          "file": "src/libs/ui/box-image/README.md",
+          "hash": "8210365680545946882"
         },
         {
-          "file": "src/libs/common/models/jest.config.ts",
-          "hash": "264227987341592298"
+          "file": "src/libs/ui/box-image/jest.config.ts",
+          "hash": "11037055268848878070"
         },
         {
-          "file": "src/libs/common/models/project.json",
-          "hash": "17688467353203420669"
+          "file": "src/libs/ui/box-image/project.json",
+          "hash": "5209218580650842825"
         },
         {
-          "file": "src/libs/common/models/src/index.ts",
-          "hash": "7425115559311091562"
+          "file": "src/libs/ui/box-image/src/index.ts",
+          "hash": "11841764057427188505"
         },
         {
-          "file": "src/libs/common/models/src/lib/plate-box.ts",
-          "hash": "549536017751287854"
+          "file": "src/libs/ui/box-image/src/lib/box-image.component.html",
+          "hash": "9644655519997709204"
         },
         {
-          "file": "src/libs/common/models/src/lib/plate-recognition.ts",
-          "hash": "12019745144764528289"
+          "file": "src/libs/ui/box-image/src/lib/box-image.component.scss",
+          "hash": "692093750330384322"
         },
         {
-          "file": "src/libs/common/models/src/lib/plate-results.ts",
-          "hash": "3632473692741006429"
+          "file": "src/libs/ui/box-image/src/lib/box-image.component.ts",
+          "hash": "10404818970193435396",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "models",
+            "npm:rxjs"
+          ]
         },
         {
-          "file": "src/libs/common/models/src/test-setup.ts",
+          "file": "src/libs/ui/box-image/src/test-setup.ts",
           "hash": "12935735732682149507",
           "deps": [
             "npm:jest-preset-angular"
           ]
         },
         {
-          "file": "src/libs/common/models/tsconfig.json",
+          "file": "src/libs/ui/box-image/tsconfig.json",
           "hash": "16248533471678702062"
         },
         {
-          "file": "src/libs/common/models/tsconfig.lib.json",
+          "file": "src/libs/ui/box-image/tsconfig.lib.json",
           "hash": "8746075233993636049"
         },
         {
-          "file": "src/libs/common/models/tsconfig.spec.json",
+          "file": "src/libs/ui/box-image/tsconfig.spec.json",
           "hash": "9840611283105717156"
         }
       ],
@@ -245,7 +251,7 @@
         },
         {
           "file": "src/app/app.component.html",
-          "hash": "13838564638660665648"
+          "hash": "10767273178448336927"
         },
         {
           "file": "src/app/app.component.scss",
@@ -261,7 +267,7 @@
         },
         {
           "file": "src/app/app.component.ts",
-          "hash": "18290594350748140789",
+          "hash": "7456344142051296780",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router",
@@ -285,14 +291,6 @@
             "npm:@angular/router",
             "home",
             "live-camera"
-          ]
-        },
-        {
-          "file": "src/app/nx-welcome.component.ts",
-          "hash": "4495106036764725462",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common"
           ]
         },
         {
@@ -354,65 +352,6 @@
           "hash": "3525076938886942204"
         }
       ],
-      "navigation-bar": [
-        {
-          "file": "src/libs/navigation-bar/.eslintrc.json",
-          "hash": "1407031631789642397"
-        },
-        {
-          "file": "src/libs/navigation-bar/README.md",
-          "hash": "3888572365189028608"
-        },
-        {
-          "file": "src/libs/navigation-bar/jest.config.ts",
-          "hash": "8240581544813115467"
-        },
-        {
-          "file": "src/libs/navigation-bar/project.json",
-          "hash": "16774694630172726487"
-        },
-        {
-          "file": "src/libs/navigation-bar/src/index.ts",
-          "hash": "14869921377890823754"
-        },
-        {
-          "file": "src/libs/navigation-bar/src/lib/navigation-bar.component.html",
-          "hash": "8905884907310174735"
-        },
-        {
-          "file": "src/libs/navigation-bar/src/lib/navigation-bar.component.scss",
-          "hash": "1047264821499003931"
-        },
-        {
-          "file": "src/libs/navigation-bar/src/lib/navigation-bar.component.ts",
-          "hash": "2337028012312633421",
-          "deps": [
-            "npm:@angular/core",
-            "npm:@angular/common",
-            "npm:@angular/router",
-            "npm:rxjs"
-          ]
-        },
-        {
-          "file": "src/libs/navigation-bar/src/test-setup.ts",
-          "hash": "12935735732682149507",
-          "deps": [
-            "npm:jest-preset-angular"
-          ]
-        },
-        {
-          "file": "src/libs/navigation-bar/tsconfig.json",
-          "hash": "8526453262384300416"
-        },
-        {
-          "file": "src/libs/navigation-bar/tsconfig.lib.json",
-          "hash": "6020606002228403423"
-        },
-        {
-          "file": "src/libs/navigation-bar/tsconfig.spec.json",
-          "hash": "7159729809249402441"
-        }
-      ],
       "home": [
         {
           "file": "src/libs/home/.eslintrc.json",
@@ -472,62 +411,53 @@
           "hash": "7159729809249402441"
         }
       ],
-      "box-image": [
+      "services": [
         {
-          "file": "src/libs/ui/box-image/.eslintrc.json",
+          "file": "src/libs/common/services/.eslintrc.json",
           "hash": "14264782331220934964"
         },
         {
-          "file": "src/libs/ui/box-image/README.md",
-          "hash": "8210365680545946882"
+          "file": "src/libs/common/services/README.md",
+          "hash": "5047947139507590044"
         },
         {
-          "file": "src/libs/ui/box-image/jest.config.ts",
-          "hash": "11037055268848878070"
+          "file": "src/libs/common/services/jest.config.ts",
+          "hash": "11185984342482548795"
         },
         {
-          "file": "src/libs/ui/box-image/project.json",
-          "hash": "5209218580650842825"
+          "file": "src/libs/common/services/project.json",
+          "hash": "13296547661678407482"
         },
         {
-          "file": "src/libs/ui/box-image/src/index.ts",
-          "hash": "11841764057427188505"
+          "file": "src/libs/common/services/src/index.ts",
+          "hash": "2038938396979172428"
         },
         {
-          "file": "src/libs/ui/box-image/src/lib/box-image.component.html",
-          "hash": "9644655519997709204"
-        },
-        {
-          "file": "src/libs/ui/box-image/src/lib/box-image.component.scss",
-          "hash": "692093750330384322"
-        },
-        {
-          "file": "src/libs/ui/box-image/src/lib/box-image.component.ts",
-          "hash": "10404818970193435396",
+          "file": "src/libs/common/services/src/lib/api.service.ts",
+          "hash": "12645956817831760504",
           "deps": [
-            "npm:@angular/core",
             "npm:@angular/common",
-            "models",
+            "npm:@angular/core",
             "npm:rxjs"
           ]
         },
         {
-          "file": "src/libs/ui/box-image/src/test-setup.ts",
+          "file": "src/libs/common/services/src/test-setup.ts",
           "hash": "12935735732682149507",
           "deps": [
             "npm:jest-preset-angular"
           ]
         },
         {
-          "file": "src/libs/ui/box-image/tsconfig.json",
+          "file": "src/libs/common/services/tsconfig.json",
           "hash": "16248533471678702062"
         },
         {
-          "file": "src/libs/ui/box-image/tsconfig.lib.json",
+          "file": "src/libs/common/services/tsconfig.lib.json",
           "hash": "8746075233993636049"
         },
         {
-          "file": "src/libs/ui/box-image/tsconfig.spec.json",
+          "file": "src/libs/common/services/tsconfig.spec.json",
           "hash": "9840611283105717156"
         }
       ],
@@ -588,54 +518,116 @@
           "hash": "7159729809249402441"
         }
       ],
-      "services": [
+      "models": [
         {
-          "file": "src/libs/common/services/.eslintrc.json",
+          "file": "src/libs/common/models/.eslintrc.json",
           "hash": "14264782331220934964"
         },
         {
-          "file": "src/libs/common/services/README.md",
-          "hash": "5047947139507590044"
+          "file": "src/libs/common/models/README.md",
+          "hash": "13610073357949299532"
         },
         {
-          "file": "src/libs/common/services/jest.config.ts",
-          "hash": "11185984342482548795"
+          "file": "src/libs/common/models/jest.config.ts",
+          "hash": "264227987341592298"
         },
         {
-          "file": "src/libs/common/services/project.json",
-          "hash": "13296547661678407482"
+          "file": "src/libs/common/models/project.json",
+          "hash": "17688467353203420669"
         },
         {
-          "file": "src/libs/common/services/src/index.ts",
-          "hash": "2038938396979172428"
+          "file": "src/libs/common/models/src/index.ts",
+          "hash": "7425115559311091562"
         },
         {
-          "file": "src/libs/common/services/src/lib/api.service.ts",
-          "hash": "12645956817831760504",
-          "deps": [
-            "npm:@angular/common",
-            "npm:@angular/core",
-            "npm:rxjs"
-          ]
+          "file": "src/libs/common/models/src/lib/plate-box.ts",
+          "hash": "549536017751287854"
         },
         {
-          "file": "src/libs/common/services/src/test-setup.ts",
+          "file": "src/libs/common/models/src/lib/plate-recognition.ts",
+          "hash": "12019745144764528289"
+        },
+        {
+          "file": "src/libs/common/models/src/lib/plate-results.ts",
+          "hash": "3632473692741006429"
+        },
+        {
+          "file": "src/libs/common/models/src/test-setup.ts",
           "hash": "12935735732682149507",
           "deps": [
             "npm:jest-preset-angular"
           ]
         },
         {
-          "file": "src/libs/common/services/tsconfig.json",
+          "file": "src/libs/common/models/tsconfig.json",
           "hash": "16248533471678702062"
         },
         {
-          "file": "src/libs/common/services/tsconfig.lib.json",
+          "file": "src/libs/common/models/tsconfig.lib.json",
           "hash": "8746075233993636049"
         },
         {
-          "file": "src/libs/common/services/tsconfig.spec.json",
+          "file": "src/libs/common/models/tsconfig.spec.json",
           "hash": "9840611283105717156"
+        }
+      ],
+      "navigation-bar": [
+        {
+          "file": "src/libs/navigation-bar/.eslintrc.json",
+          "hash": "1407031631789642397"
+        },
+        {
+          "file": "src/libs/navigation-bar/README.md",
+          "hash": "3888572365189028608"
+        },
+        {
+          "file": "src/libs/navigation-bar/jest.config.ts",
+          "hash": "8240581544813115467"
+        },
+        {
+          "file": "src/libs/navigation-bar/project.json",
+          "hash": "16774694630172726487"
+        },
+        {
+          "file": "src/libs/navigation-bar/src/index.ts",
+          "hash": "14869921377890823754"
+        },
+        {
+          "file": "src/libs/navigation-bar/src/lib/navigation-bar.component.html",
+          "hash": "8905884907310174735"
+        },
+        {
+          "file": "src/libs/navigation-bar/src/lib/navigation-bar.component.scss",
+          "hash": "1047264821499003931"
+        },
+        {
+          "file": "src/libs/navigation-bar/src/lib/navigation-bar.component.ts",
+          "hash": "2337028012312633421",
+          "deps": [
+            "npm:@angular/core",
+            "npm:@angular/common",
+            "npm:@angular/router",
+            "npm:rxjs"
+          ]
+        },
+        {
+          "file": "src/libs/navigation-bar/src/test-setup.ts",
+          "hash": "12935735732682149507",
+          "deps": [
+            "npm:jest-preset-angular"
+          ]
+        },
+        {
+          "file": "src/libs/navigation-bar/tsconfig.json",
+          "hash": "8526453262384300416"
+        },
+        {
+          "file": "src/libs/navigation-bar/tsconfig.lib.json",
+          "hash": "6020606002228403423"
+        },
+        {
+          "file": "src/libs/navigation-bar/tsconfig.spec.json",
+          "hash": "7159729809249402441"
         }
       ]
     }
